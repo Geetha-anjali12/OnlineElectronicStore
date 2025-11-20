@@ -12,7 +12,7 @@ public class CustomerLoginDAO
 		try
 		{
 			Connection con=DBConnect.getCon();
-			PreparedStatement pstmt=con.prepareStatement("select *from customer where  MID=? AND  UPWORD=?");
+			PreparedStatement pstmt=con.prepareStatement("select *from customer where  MID=? AND  PWD=?");
 			System.out.println("CustomerLogin Connection created");
 			pstmt.setString(1,Mid);
 			pstmt.setString(2, U_pwd);
